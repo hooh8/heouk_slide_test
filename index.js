@@ -78,10 +78,14 @@ btngnbList.addEventListener("click", function () {
 });
 
 
-$(".btnSide").click(function () {
-  $("#gnb").addClass("on");
+let btnSide = document.querySelector(".btnSide");
+let gnb = document.querySelector("#gnb");
+btnSide.addEventListener("click", function () {
+  gnb.classList.add("on");
 });
 
-$(window).resize(function () {
-  $("#gnb").removeClass("on");
+gnb.addEventListener("click", function (event) {
+  if (event.target === event.currentTarget) {
+    gnb.classList.remove("on");
+  }
 });
