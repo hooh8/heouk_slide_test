@@ -68,10 +68,15 @@ btnCloseModal.addEventListener("click", function (e) {
   modalBg.classList.add("hidden");
   document.body.style.overflow = "auto";
 });
+window.addEventListener("click", function (e) {
+  modalBg.classList.add("hidden");
+  document.body.style.overflow = "auto";
+});
 btngnbList.addEventListener("click", function () {
   modalBg.classList.remove("hidden");
   document.body.style.overflow = "hidden";
 });
+
 
 $(".btnSide").click(function () {
   $("#gnb").addClass("on");
